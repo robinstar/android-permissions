@@ -1,0 +1,5 @@
+<resources>
+    <string name="vibrate">Vibrate</string>
+    <string name="location">Location</string>
+    <string name="permissions">Permissions</string>
+</resources>
