@@ -4,8 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -50,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
      * Called when the user taps the Permissions button.
      */
     public void launchPermissions(View view) {
-        Intent intent = new Intent("android.settings.APPLICATION_SETTINGS");
-        intent.putExtra(Intent.EXTRA_PACKAGE_NAME, getPackageName());
+        Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+        intent.setData(Uri.parse("package:" + getPackageName()));
         startActivity(intent);
     }
 }
