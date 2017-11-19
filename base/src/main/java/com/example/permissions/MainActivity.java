@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.core.IntentUtils;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -55,5 +57,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
         intent.setData(Uri.parse("package:" + getPackageName()));
         startActivity(intent);
+        IntentUtils.launchPackageDetails(this, getPackageName());
     }
 }
