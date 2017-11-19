@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="vibrate">Vibrate</string>
+    <string name="location">Location</string>
+    <string name="permissions">Permissions</string>
+
+    <string name="request_fine_location_permission">Request Fine Location</string>
+    <string name="fine_location">Fine Location Status</string>
+    <string name="coarse_location">Coarse Location Status</string>
+</resources>

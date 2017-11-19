@@ -1,1 +1,1 @@
-include ':base', ':undeclared', ':declared-target-22', ':declared-target-23'
+include ':core', ':base', ':undeclared', ':declared-target-22', ':declared-target-23'
