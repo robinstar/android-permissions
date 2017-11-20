@@ -1,0 +1,13 @@
+#!/bin/bash
+
+find . -name "*.apk" | xargs rm -f
+
+apks=($(find .. -name '*.apk'))
+
+for item in ${apks[*]}
+do
+  debugName=${item##*/}
+  prefix=${debugName%-debug.apk}
+  file=${prefix}'.apk'
+  cp -f ${item} ${file}
+done
