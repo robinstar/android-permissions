@@ -1,10 +1,8 @@
 package com.example.permissions.appcompat;
 
 import android.Manifest;
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -60,7 +58,6 @@ public class MainActivity extends Activity {
     /**
      * Called when the user taps the Fine Permission button.
      */
-    @TargetApi(Build.VERSION_CODES.M)
     public void checkFineLocationPermission(View view) {
         final int status = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
         String text = PermissionUtils.getDisplayStatus(this, status).toString();
@@ -71,7 +68,6 @@ public class MainActivity extends Activity {
     /**
      * Called when the user taps the Coarse Permission button.
      */
-    @TargetApi(Build.VERSION_CODES.M)
     public void checkCoarseLocationPermission(View view) {
         final int status = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
         String text = PermissionUtils.getDisplayStatus(this, status).toString();
