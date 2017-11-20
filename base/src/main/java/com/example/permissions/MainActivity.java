@@ -1,19 +1,18 @@
 package com.example.permissions;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.core.IntentUtils;
 
+@SuppressLint("MissingPermission")
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -54,9 +53,6 @@ public class MainActivity extends AppCompatActivity {
      * Called when the user taps the Permissions button.
      */
     public void launchPermissions(View view) {
-        Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-        intent.setData(Uri.parse("package:" + getPackageName()));
-        startActivity(intent);
         IntentUtils.launchPackageDetails(this, getPackageName());
     }
 }
